@@ -1,14 +1,14 @@
 import { Composite, ImageView } from 'tabris';
-import { bind, getByType, component } from 'tabris-decorators';
+import { bind, getByType, component, property } from 'tabris-decorators';
 import { RedditPostData } from './RedditService';
 
 @component export default class RedditListCell extends Composite {
 
   private _item: RedditPostData;
   @getByType private thumbView: ImageView;
-  @bind('#commentText.text') private commentText: string;
-  @bind('#nameText.text') private title: string;
-  @bind('#authorText.text') private author: string;
+  @property private commentText: string;
+  @property private title: string;
+  @property private author: string;
 
   constructor() {
     super();
@@ -25,18 +25,21 @@ import { RedditPostData } from './RedditService';
             scaleMode='fill' />
         <textView
             id='nameText'
+            bind-text='title'
             top={8} left={['#thumbView', 16]} right={16}
             textColor='#202020'
             font='medium 14px'
             maxLines={2} />
         <textView
             id='commentText'
+            bind-text='commentText'
             bottom={8} right={16}
             alignment='right'
             textColor='#7CB342'
             font='12px' />
         <textView
             id='authorText'
+            bind-text='author'
             bottom={8} left='#thumbView 16' right='#commentText 16'
             textColor='#767676'
             font='12px' />
