@@ -8,7 +8,7 @@ It fetches data from the [/r/petpictures subreddit](https://www.reddit.com/r/pet
 |---|---|
 |![List mode](petpictures1.png)|![Gallery mode](petpictures2.png)|
 
-The project uses [Tabris.js Decorators](github.com/eclipsesource/tabris-decorators) on top of Tabris.js, which provides useful TypeScript decorators replacing repetetive code common in app development. Features used in the example:
+The project uses [Tabris.js Decorators](http://github.com/eclipsesource/tabris-decorators) on top of Tabris.js, which provides useful TypeScript decorators replacing repetetive code common in app development. Features used in the example:
 
 * [**`@getById private myWidgetId: TextView;`**](https://github.com/eclipsesource/tabris-decorators/tree/371fab73cf4b9eafdd8d16a20d11673a4ede0dbf#getbyid)
 
