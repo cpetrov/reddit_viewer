@@ -1,11 +1,12 @@
 import { Page, Properties } from 'tabris';
 import { RedditPost } from './RedditService';
+import { component } from 'tabris-decorators';
 
 const STRECH = {left: 0, top: 0, right: 0, bottom: 0};
 
 interface ItemProperty {item: RedditPost; }
 
-export default class RedditPostPage extends Page {
+@component export default class RedditPostPage extends Page {
 
   public jsxProperties: JSX.PageProperties & ItemProperty;
 

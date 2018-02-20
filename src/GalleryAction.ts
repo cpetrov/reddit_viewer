@@ -1,11 +1,11 @@
 import { Action, Properties, PropertyChangedEvent, Page } from 'tabris';
-import { property } from 'tabris-decorators';
+import { component, property } from 'tabris-decorators';
 
 type Mode = 'gallery' | 'list';
 
 interface GalleryActionParams {page: Page; }
 
-export default class GalleryAction extends Action {
+@component export default class GalleryAction extends Action {
 
   public jsxProperties: JSX.ActionProperties & GalleryActionParams;
 
